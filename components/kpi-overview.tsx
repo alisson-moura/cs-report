@@ -10,28 +10,24 @@ export function KpiOverview() {
     <div className="grid gap-4 md:grid-cols-3 md:gap-6">
       {/* KPI 1: Rating Médio */}
       <Card className="border-2 hover:shadow-lg transition-shadow">
-        {/* Padding reduzido de p-6 para p-4 */}
-        <CardContent className="p-4">
+        {/* Padding vertical reduzido */}
+        <CardContent className="px-6">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              {/* Margem reduzida de mb-2 para mb-1 */}
               <p className="text-sm font-medium text-muted-foreground mb-1">
                 Rating Médio
               </p>
-              {/* Margem reduzida de mb-3 para mb-2 */}
-              <div className="flex items-baseline gap-2 mb-2">
-                {/* Fonte reduzida de 4xl para 3xl */}
-                <span className="text-3xl font-bold text-foreground">
+              <div className="flex items-baseline gap-2 mb-1">
+                <span className="text-2xl font-bold text-foreground">
                   {averageRating.toFixed(1)}
                 </span>
-                <span className="text-lg text-muted-foreground">/ 5.0</span>
+                <span className="text-base text-muted-foreground">/ 5.0</span>
               </div>
-              {/* Margem reduzida de mb-3 para mb-2 */}
-              <div className="flex items-center gap-1 mb-2">
+              <div className="flex items-center gap-1 mb-1">
                 {[1, 2, 3, 4, 5].map((star) => (
                   <Star
                     key={star}
-                    className={`h-5 w-5 ${
+                    className={`h-3 w-3 ${
                       star <= Math.round(averageRating)
                         ? "fill-yellow-400 text-yellow-400"
                         : "fill-gray-200 text-gray-200"
@@ -40,8 +36,8 @@ export function KpiOverview() {
                 ))}
               </div>
             </div>
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-yellow-100">
-              <Star className="h-6 w-6 text-yellow-600" />
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-yellow-100">
+              <Star className="h-4 w-4 text-yellow-600" />
             </div>
           </div>
         </CardContent>
@@ -49,28 +45,24 @@ export function KpiOverview() {
 
       {/* KPI 2: Total de Reviews */}
       <Card className="border-2 hover:shadow-lg transition-shadow">
-        {/* Padding reduzido de p-6 para p-4 */}
-        <CardContent className="p-4">
+        {/* Padding vertical reduzido */}
+        <CardContent className="px-6">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              {/* Margem reduzida de mb-2 para mb-1 */}
               <p className="text-sm font-medium text-muted-foreground mb-1">
                 Total de Avaliações
               </p>
-              {/* Margem reduzida de mb-3 para mb-2 */}
-              <div className="flex items-baseline gap-2 mb-2">
-                {/* Fonte reduzida de 4xl para 3xl */}
-                <span className="text-3xl font-bold text-foreground">
+              <div className="flex items-baseline gap-2 mb-1">
+                <span className="text-2xl font-bold text-foreground">
                   {totalReviews.toLocaleString("pt-BR")}
                 </span>
               </div>
-              {/* Margem reduzida de mb-3 para mb-2 */}
-              <p className="text-sm text-muted-foreground mb-2">
+              <p className="text-sm text-muted-foreground mb-1">
                 Feedbacks recebidos no período
               </p>
             </div>
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-blue-100">
-              <MessageSquare className="h-6 w-6 text-blue-600" />
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-blue-100">
+              <MessageSquare className="h-4 w-4 text-blue-600" />
             </div>
           </div>
         </CardContent>
@@ -78,28 +70,27 @@ export function KpiOverview() {
 
       {/* KPI 3: Sentimento Predominante */}
       <Card className="border-2 hover:shadow-lg transition-shadow">
-        {/* Padding reduzido de p-6 para p-4 */}
-        <CardContent className="p-4">
+        {/* Padding vertical reduzido */}
+        <CardContent className="px-6">
           <div className="flex items-start justify-between">
             <div className="flex-1">
-              {/* Margem reduzida de mb-2 para mb-1 */}
               <p className="text-sm font-medium text-muted-foreground mb-1">
                 Sentimento Predominante
               </p>
-              {/* Margem reduzida de mb-3 para mb-2 */}
-              <div className="flex items-baseline gap-2 mb-2">
-                {/* Fonte reduzida de 4xl para 3xl */}
-                <span className="text-3xl font-bold text-green-600">
+              <div className="flex items-baseline gap-2 mb-1">
+                <span className="text-2xl font-bold text-green-600">
                   {positivePercentage}%
                 </span>
-                <span className="text-lg text-muted-foreground">Positivo</span>
+                <span className="text-base text-muted-foreground">
+                  Positivo
+                </span>
               </div>
-              {/* Espaçador adicionado para manter a altura mínima (opcional) */}
-              <div className="h-5 mb-2" />
+              {/* Espaçador para alinhamento vertical */}
+              <div className="h-3 mb-1" />
             </div>
-            <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-full bg-green-100">
+            <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-100">
               <svg
-                className="h-6 w-6 text-green-600"
+                className="h-4 w-4 text-green-600"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
