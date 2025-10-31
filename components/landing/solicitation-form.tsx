@@ -1,99 +1,51 @@
-"use client";
-
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Card, CardContent } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
 export function SolicitationForm() {
-  const [nome, setNome] = useState("");
-  const [email, setEmail] = useState("");
-  const [estabelecimento, setEstabelecimento] = useState("");
-  const [status, setStatus] = useState<
-    "idle" | "loading" | "success" | "error"
-  >("idle");
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setStatus("loading");
-    // LÓGICA DE ENVIO DO FORMULÁRIO (ex: para sua API route)
-    // await fetch('/api/solicitar', { method: 'POST', body: ... })
-    console.log({ nome, email, estabelecimento });
-
-    // Simulação de sucesso
-    setTimeout(() => {
-      setStatus("success");
-    }, 1500);
-  };
-
-  if (status === "success") {
-    return (
-      <Card className="bg-muted">
-        <CardContent className="pt-6">
-          <div className="flex flex-col items-center gap-4 text-center">
-            <h3 className="text-xl font-bold">Solicitação Recebida!</h3>
-            <p className="text-muted-foreground">
-              Obrigado, {nome}. Nossa IA já está analisando seus reviews.
-              Enviaremos o link de acesso para **{email}** em até 24 horas.
-            </p>
-          </div>
-        </CardContent>
-      </Card>
-    );
-  }
-
   return (
-    <Card>
-      <CardContent className="pt-6">
-        <form onSubmit={handleSubmit} className="flex flex-col gap-4">
-          <div className="space-y-2">
-            <Label htmlFor="nome">Seu Nome</Label>
-            <Input
-              id="nome"
-              placeholder="Ex: Alison"
-              required
-              value={nome}
-              onChange={(e) => setNome(e.target.value)}
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="email">Seu Email</Label>
-            <Input
-              id="email"
-              type="email"
-              placeholder="voce@email.com"
-              required
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-            />
-          </div>
-          <div className="space-y-2">
-            <Label htmlFor="estabelecimento">
-              Nome do Estabelecimento (Google Maps)
-            </Label>
-            <Input
-              id="estabelecimento"
-              placeholder="Ex: Padaria Pão Quente"
-              required
-              value={estabelecimento}
-              onChange={(e) => setEstabelecimento(e.target.value)}
-            />
-            {/* DICA: Substitua este Input por um componente
-              de autocomplete do Google Places API para pegar o place_id
-            */}
-          </div>
-          <Button type="submit" size="lg" disabled={status === "loading"}>
-            {status === "loading"
-              ? "Processando..."
-              : "Solicitar minha Análise"}
-          </Button>
-          <p className="text-xs text-center text-muted-foreground">
-            Gratuito para solicitar. Você só paga R$ 20 (taxa única) se decidir
-            acessar o relatório pronto.
-          </p>
-        </form>
-      </CardContent>
-    </Card>
+    <section id="solicitar" className="py-20 md:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Card className="max-w-2xl mx-auto">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl md:text-3xl">Solicite sua Análise Gratuita</CardTitle>
+          </CardHeader>
+          <CardContent>
+            <form className="grid gap-4">
+              <div className="grid gap-2">
+                <Label htmlFor="name">Nome</Label>
+                <Input id="name" placeholder="Seu nome completo" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="email">Email</Label>
+                <Input id="email" type="email" placeholder="seu@email.com" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="establishment">Estabelecimento</Label>
+                <Input id="establishment" placeholder="Nome do seu negócio no Google Maps" required />
+              </div>
+              <div className="grid gap-2">
+                <Label htmlFor="area">Área de Atuação</Label>
+                <Select required>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Selecione a área do seu negócio" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="restaurante">Restaurante, Café ou Padaria</SelectItem>
+                    <SelectItem value="saude">Clínica Médica ou Odontológica</SelectItem>
+                    <SelectItem value="beleza">Salão de Beleza ou Barbearia</SelectItem>
+                    <SelectItem value="varejo">Pequeno Varejista</SelectItem>
+                    <SelectItem value="outro">Outro</SelectItem>
+                  </SelectContent>
+                </Select>
+              </div>
+              <Button type="submit" size="lg" className="mt-4">Enviar Solicitação</Button>
+            </form>
+          </CardContent>
+        </Card>
+      </div>
+    </section>
   );
 }

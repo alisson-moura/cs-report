@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { FileText, Clock, LockOpen } from "lucide-react"; // Ícones atualizados
+import { FileText, Clock, LockOpen } from "lucide-react";
 
 export function HowItWorksSection() {
   return (
@@ -14,8 +14,7 @@ export function HowItWorksSection() {
             <CardTitle>1. Solicite (Grátis)</CardTitle>
           </CardHeader>
           <CardContent>
-            Preencha o formulário com seus dados e o nome do seu
-            estabelecimento.
+            Preencha o formulário com seus dados e o nome do seu estabelecimento. É rápido e 100% gratuito.
           </CardContent>
         </Card>
         <Card className="text-center">
@@ -24,18 +23,16 @@ export function HowItWorksSection() {
             <CardTitle>2. Aguarde (Até 24h)</CardTitle>
           </CardHeader>
           <CardContent>
-            Nossa IA irá buscar e analisar todos os seus reviews. Enviaremos um
-            e-mail quando estiver pronto.
+            Nossa IA irá buscar e analisar os 500 reviews mais recentes do seu negócio. Enviaremos um e-mail com o link do seu painel assim que estiver pronto.
           </CardContent>
         </Card>
         <Card className="text-center">
           <CardHeader>
             <LockOpen className="w-10 h-10 text-primary mx-auto mb-4" />
-            <CardTitle>3. Decida (Pague R$ 20)</CardTitle>
+            <CardTitle>3. Pague (Só se gostar)</CardTitle>
           </CardHeader>
           <CardContent>
-            Acesse o link no seu e-mail. Pague a taxa única **apenas se quiser**
-            destravar e ver seu painel completo.
+            Você receberá um link para o seu painel. Se gostar do que vê, pague a taxa única de R$20 para destravar o acesso vitalício.
           </CardContent>
         </Card>
       </div>

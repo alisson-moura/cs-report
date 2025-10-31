@@ -1,26 +1,23 @@
-// components/landing/benefits-section.tsx
-// (Substituído e adaptado com seu novo código de layout)
-
 import { Button } from "@/components/ui/button";
 import { Check } from "lucide-react";
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 
-// Lista de benefícios do seu relatório de R$ 20
 const features = [
   "Análise de Sentimento (Positivo/Neutro/Negativo)",
   "Análise de Aspectos (Atendimento, Preço, etc.)",
   "Perfil Emocional (Raiva, Alegria, Frustração...)",
   "Análise de Intenções (Elogio, Reclamação, Sugestão)",
-  "Processamento de todos os reviews históricos",
-  "Link permanente para seu painel de BI",
+  "Resumo Executivo com IA",
+  "Chat com IA para explorar seus dados",
+  "Exportação para PDF e Excel",
+  "Acesso vitalício ao painel",
 ];
 
 export function PricingSection() {
   return (
-    // ID "beneficios" mantido para qualquer link interno
     <section
-      id="beneficios"
+      id="preco"
       className="bg-muted w-full relative py-16 md:py-24"
     >
       <div className="mx-auto max-w-5xl px-6">
@@ -29,8 +26,7 @@ export function PricingSection() {
             Um preço único para um insight completo.
           </h2>
           <p className="text-muted-foreground mx-auto mt-4 max-w-md text-balance text-lg">
-            Sem mensalidade, sem pegadinha. Solicite sua análise e pague apenas
-            uma vez.
+            Sem mensalidade, sem pegadinha. Pague apenas uma vez e acesse seu relatório para sempre.
           </p>
         </div>
         <div className="mt-8 md:mt-16">
@@ -42,7 +38,6 @@ export function PricingSection() {
                   Um painel de BI completo sobre seu negócio.
                 </p>
 
-                {/* Preço ajustado para R$ 20 */}
                 <span className="mb-2 mt-12 inline-block text-6xl font-bold">
                   <span className="text-4xl">R$</span>20
                 </span>
@@ -52,8 +47,7 @@ export function PricingSection() {
 
                 <div className="flex justify-center mt-8">
                   <Button asChild size="lg">
-                    {/* Link ajustado para a âncora do formulário */}
-                    <Link href="#solicitar-form">Solicitar minha Análise</Link>
+                    <Link href="#solicitar">Solicitar minha Análise</Link>
                   </Button>
                 </div>
               </div>
@@ -61,7 +55,6 @@ export function PricingSection() {
                 <p className="text-sm font-semibold text-muted-foreground mb-4">
                   O seu relatório completo inclui:
                 </p>
-                {/* Lista de benefícios reais do seu SaaS */}
                 <ul role="list" className="space-y-4">
                   {features.map((item, index) => (
                     <li key={index} className="flex items-center gap-2">

@@ -13,12 +13,9 @@ export function ProblemSection() {
         />
 
         <div className="flex flex-col gap-4">
-          <h2 className="text-3xl font-bold">Sua nota não diz tudo</h2>
+          <h2 className="text-3xl font-bold">Sua nota 4.5 não diz o porquê.</h2>
           <p className="text-lg text-muted-foreground">
-            Ler avaliações uma por uma pode ser lento e esconder a verdade. Você
-            acha que o problema é o &quot;preço&quot;, mas sua nota está caindo
-            por causa do &quot;atendimento&quot; ou do &quot;tempo de
-            espera&quot;. Você não sabe onde agir primeiro.
+            Ler reviews um por um é um trabalho lento, manual e que não gera inteligência. Você até tenta, mas no fim do dia, a gestão do negócio te consome. O resultado? Você fica com uma visão superficial, sem conseguir identificar padrões claros sobre o que realmente impacta a satisfação do seu cliente, seja o atendimento, o preço ou a qualidade do produto.
           </p>
         </div>
       </div>

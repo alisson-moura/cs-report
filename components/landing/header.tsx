@@ -34,6 +34,12 @@ export function Header() {
           >
             Benefícios
           </Link>
+          <Link
+            href="#preco"
+            className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+          >
+            Preço
+          </Link>
         </nav>
 
         <div className="flex items-center gap-4">

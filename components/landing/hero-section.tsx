@@ -21,18 +21,16 @@ export default function HeroSection() {
                 <span className={roboto.className}>Google Reviews</span>
               </div>
               <h1 className="max-w-md text-balance text-5xl font-bold tracking-tighter md:text-6xl mt-2">
-                Descubra o que seus clientes realmente pensam.
+                Transforme reviews em decisões, não em achismos.
               </h1>
               <p className="text-muted-foreground my-8 max-w-2xl text-balance text-xl">
-                Utilizamos IA para analisar suas avaliações no Google e
-                transforma seus dados em um painel de B.I. Solicite sua análise
-                e transforme dados em insights valiosos
+                Nossa IA analisa 100% dos seus reviews no Google e revela o porquê por trás da sua nota. Entenda os sentimentos, os tópicos mais comentados e as intenções dos seus clientes em um painel de BI simples e acionável.
               </p>
 
               <div className="flex items-center gap-3">
                 <Button asChild size="lg" className="pr-4.5">
-                  <Link href="#link">
-                    <span className="text-nowrap">Solicitar Análise</span>
+                  <Link href="#solicitar">
+                    <span className="text-nowrap">Solicitar Análise Gratuita</span>
                     <ChevronRight className="opacity-50" />
                   </Link>
                 </Button>
@@ -43,9 +41,9 @@ export default function HeroSection() {
                   variant="outline"
                   className="pl-5"
                 >
-                  <Link href="#link">
+                  <Link href="/reports">
                     <CirclePlay className="fill-primary/25 stroke-primary" />
-                    <span className="text-nowrap">Acessar demonstração</span>
+                    <span className="text-nowrap">Ver Demonstração</span>
                   </Link>
                 </Button>
               </div>
