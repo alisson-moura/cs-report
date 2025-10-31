@@ -14,7 +14,7 @@ export function Footer() {
       className="border-t bg-background text-muted-foreground" // text-muted-foreground para o footer
       aria-labelledby="footer-heading"
     >
-      <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-6 md:flex-row md:px-6">
+      <div className="container mx-auto flex flex-col items-center justify-between gap-4 px-4 py-6 md:flex-row sm:px-6 lg:px-8">
         {/* Lado Esquerdo (Desktop) / Topo (Mobile): Links de Contato */}
         <div className="flex flex-col items-center gap-4 md:flex-row md:gap-6">
           <a
