@@ -5,7 +5,6 @@ import { SolutionSection } from "@/components/landing/solution-section";
 import { BenefitsSection } from "@/components/landing/benefits-section";
 import { PricingSection } from "@/components/landing/pricing-section";
 import { HowItWorksSection } from "@/components/landing/how-it-works-section";
-import { SolicitationForm } from "@/components/landing/solicitation-form";
 import { FinalCtaSection } from "@/components/landing/final-cta-section";
 import { Footer } from "@/components/footer";
 

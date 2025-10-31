@@ -13,9 +13,14 @@ export function ProblemSection() {
         />
 
         <div className="flex flex-col gap-4">
-          <h2 className="text-3xl font-bold">Sua nota 4.5 não diz o porquê.</h2>
+          <h2 className="text-3xl font-bold">Sua nota não diz tudo.</h2>
           <p className="text-lg text-muted-foreground">
-            Ler reviews um por um é um trabalho lento, manual e que não gera inteligência. Você até tenta, mas no fim do dia, a gestão do negócio te consome. O resultado? Você fica com uma visão superficial, sem conseguir identificar padrões claros sobre o que realmente impacta a satisfação do seu cliente, seja o atendimento, o preço ou a qualidade do produto.
+            Ler reviews um por um é um trabalho lento, manual e que não gera
+            inteligência. Você até tenta, mas no fim do dia, a gestão do negócio
+            te consome. O resultado? Você fica com uma visão superficial, sem
+            conseguir identificar padrões claros sobre o que realmente impacta a
+            satisfação do seu cliente, seja o atendimento, o preço ou a
+            qualidade do produto.
           </p>
         </div>
       </div>

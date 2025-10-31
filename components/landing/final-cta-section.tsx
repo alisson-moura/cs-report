@@ -9,7 +9,9 @@ export function FinalCtaSection() {
           Pronto para transformar seus reviews em resultados?
         </h2>
         <p className="text-lg text-muted-foreground">
-          Chega de "achar". Comece a decidir com base em dados. Solicite sua análise gratuita agora mesmo e dê o primeiro passo para entender de verdade o que seus clientes pensam.
+          Chega de &quot;achar&quot;. Comece a decidir com base em dados.
+          Solicite sua análise gratuita agora mesmo e dê o primeiro passo para
+          entender de verdade o que seus clientes pensam.
         </p>
         <Button size="lg" asChild>
           <Link href="#solicitar">Solicitar minha Análise Gratuita</Link>
