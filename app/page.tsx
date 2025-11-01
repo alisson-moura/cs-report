@@ -7,6 +7,7 @@ import { PricingSection } from "@/components/landing/pricing-section";
 import { HowItWorksSection } from "@/components/landing/how-it-works-section";
 import { FinalCtaSection } from "@/components/landing/final-cta-section";
 import { Footer } from "@/components/footer";
+import { SolicitationForm } from "@/components/landing/solicitation-form";
 
 export default function LandingPage() {
   return (
@@ -19,6 +20,7 @@ export default function LandingPage() {
         <BenefitsSection />
         <PricingSection />
         <HowItWorksSection />
+        <SolicitationForm />
         <FinalCtaSection />
       </main>
       <Footer />
